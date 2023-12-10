@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+
+.page {
+  max-width: 1440px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 80px;
+  background-color: #FF63D6;
+  color: #000;
+  font-family: 'Inter', sans-serif;
+}
+
+h1,
+h2,
+h3,
+p,
+ul,
+ol,
+li,
+blockquote {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}

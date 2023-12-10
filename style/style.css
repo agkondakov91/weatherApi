@@ -1,0 +1,10 @@
+.header__title {
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+}
+
+.header__list {
+  display: flex;
+}
