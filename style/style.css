@@ -1,4 +1,5 @@
 .header__title {
+  margin-block-end: 20px;
   font-size: 80px;
   font-style: normal;
   font-weight: 900;
@@ -7,4 +8,130 @@
 
 .header__list {
   display: flex;
+  gap: 20px;
+}
+
+.header__item {
+  width: 180px;
+  height: 60px;
+  background-color: transparent;
+  border: 2px solid #000;
+  border-radius: 30px;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  cursor: pointer;
+}
+
+.header__item:hover {
+  background-color: #000;
+  color: #ff63d6;
+}
+
+.is-active {
+  background-color: #000;
+  color: #ff63d6;
+}
+
+.main {
+  padding-block-start: 80px;
+}
+
+.main__title {
+  font-size: 100px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.main__subtitle {
+  margin-inline-start: 7px;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.page__section {
+  margin-block-start: 60px;
+}
+
+.places__item {
+  padding: 50px;
+  width: 1056px;
+  border: 2px solid #000;
+  border-radius: 20px;
+}
+
+.places__info {
+  display: flex;
+  gap: 80px;
+  margin-block-end: 30px;
+}
+
+.places__temperature {
+  font-size: 233px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: -23.3px;
+}
+
+.places__card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  padding: 40px;
+  width: 412px;
+  height: 233px;
+  border-radius: 20px;
+  background: #000;
+  color: #ff63d6;
+}
+
+.places__list {
+  text-align: center;
+}
+
+.places__image {
+  margin-block-end: 10px;
+}
+
+.places__title {
+  margin-block-end: 5px;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+}
+
+.places__paragraph {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.places__daily {
+  margin-block-end: 20px;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+}
+
+.places__description {
+  width: 827px;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.places__accent {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
 }

@@ -22,3 +22,10 @@
 // }
 
 // getWeather();
+
+const main = document.querySelector('.main');
+
+const template = document.querySelector('#template').content;
+const cardtemplate = template.querySelector('.card').cloneNode(true);
+
+main.append(cardtemplate)
