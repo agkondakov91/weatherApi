@@ -7,7 +7,7 @@
   min-height: 100vh;
   margin: 0 auto;
   padding: 80px;
-  background-color: #FF63D6;
+  background-color: var(--pink-color);
   color: #000;
   font-family: 'Inter', sans-serif;
 }

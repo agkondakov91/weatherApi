@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Wether API</title>
     <link rel="stylesheet" href="./fonts/fonts.css" />
+    <link rel="stylesheet" href="./style/variables.css" />
     <link rel="stylesheet" href="./style/global.css" />
     <link rel="stylesheet" href="./style/style.css" />
   </head>
@@ -13,13 +14,13 @@
       <h1 class="header__title">Choose the desired city</h1>
       <ul class="header__list">
         <li>
-          <button class="header__item is-active">London</button>
+          <button class="header__item London ">London</button>
         </li>
         <li>
-          <button class="header__item">Moscow</button>
+          <button class="header__item Moscow">Moscow</button>
         </li>
         <li>
-          <button class="header__item">Istanbul</button>
+          <button class="header__item Istanbul">Istanbul</button>
         </li>
       </ul>
     </header>
@@ -28,51 +29,51 @@
     </main>
     <footer class="footer"></footer>
     <template id="template">
-      <div class="card">
-        <h2 class="main__title">London</h2>
-        <p class="main__subtitle">Friday, 8 December</p>
+      <div class="card main__card">
+        <h2 class="main__city"></h2>
+        <p class="main__date">Friday, 8 December, 19:54:13</p>
         <section class="places page__section">
           <div class="places__item">
             <div class="places__info">
-              <p class="places__temperature">+17 °</p>
+              <p class="places__temperature"></p>
               <ul class="places__card">
                 <li class="places__list">
                   <img
                     class="places__image"
-                    src="./images/wind.svg"
+                    src="./images/wind_pink.svg"
                     alt="icon of wind"
                   />
-                  <p class="places__title">2km/h</p>
-                  <p class="places__paragraph">Wind</p>
+                  <p class="places__title"></p>
+                  <p class="places__paragraph">Wind, km/h</p>
                 </li>
                 <li class="places__list">
                   <img
                     class="places__image"
-                    src="./images/humidity.svg"
+                    src="./images/humidity_pink.svg"
                     alt="icon of humidity"
                   />
-                  <p class="places__title">2km/h</p>
-                  <p class="places__paragraph">Humidity</p>
+                  <p class="places__title"></p>
+                  <p class="places__paragraph">Humidity, %</p>
                 </li>
                 <li class="places__list">
                   <img
                     class="places__image"
-                    src="./images/visibility.svg"
+                    src="./images/visibility_pink.svg"
                     alt="icon of visibility"
                   />
-                  <p class="places__title">2km/h</p>
-                  <p class="places__paragraph">Visibility</p>
+                  <p class="places__title"></p>
+                  <p class="places__paragraph">Visibility, km</p>
                 </li>
               </ul>
             </div>
             <h3 class="places__daily">Daily Summary</h3>
             <p class="places__description">
-              Now it seems that <span class="places__accent">24</span> in fact
-              <span class="places__accent">24</span>. Atmospheric pressure on
-              the sea level <span class="places__accent">24</span>. Cloudiness —
-              <span class="places__accent">24</span>. The temperature at the
-              moment in the range from <span class="places__accent">24</span> to
-              <span class="places__accent">24</span>.
+              Now it feels like <span class="places__accent"></span> in fact
+              <span class="places__accent"></span>. Atmospheric pressure —
+              <span class="places__accent"></span>. Cloudiness —
+              <span class="places__accent"></span>. The temperature at the
+              moment in the range from <span class="places__accent"></span> to
+              <span class="places__accent"></span>.
             </p>
           </div>
         </section>
