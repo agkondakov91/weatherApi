@@ -1,14 +1,12 @@
 // ***************************************** //
-
-//@to-do: найти кнопки
-
+//@to-do: найти элементы
 const buttonLondon = document.querySelector(".London");
 const buttonMoscow = document.querySelector(".Moscow");
 const buttonIstanbul = document.querySelector(".Istanbul");
 const buttons = document.querySelectorAll(".header__item");
+const pageColor = document.querySelector('.page');
 
 //@to-do: найти темплейт
-
 const main = document.querySelector(".main");
 const template = document.querySelector("#template").content;
 
@@ -37,7 +35,6 @@ const getWeatherLondon = () => {
   )
     .then((res) => checkResponse(res))
     .then((data) => {
-      console.log(data);
       const card = createCard(data);
       main.prepend(card);
     });
@@ -52,7 +49,6 @@ const getWeatherMoscow = () => {
   )
     .then((res) => checkResponse(res))
     .then((data) => {
-      console.log(data);
       const card = createCard(data);
       main.prepend(card);
     });
@@ -67,7 +63,6 @@ const getWeatherIstanbul = () => {
   )
     .then((res) => checkResponse(res))
     .then((data) => {
-      console.log(data);
       const card = createCard(data);
       main.prepend(card);
     });
@@ -93,7 +88,7 @@ const createCard = (data) => {
 
   mainCity.textContent = data.name;
   mainDate.textContent = getDateNow();
-  temperature.textContent = `${data.main.temp}°`;
+  temperature.textContent = `${Math.round(data.main.temp)} °`;
 
   placesTitle.forEach((item, index) => {
     switch (index) {
@@ -157,18 +152,22 @@ const getDateNow = () => {
 
 //@to-do: написать функции рендера для кнопок
 const handleRenderCardLondon = () => {
+  deleteCard();
   resetButtonStyle();
+  setPinkTheme();
   buttonLondon.classList.add("is-active");
   getWeatherLondon();
 };
 
 const handleRenderCardMoscow = () => {
+  deleteCard();
   resetButtonStyle();
   buttonMoscow.classList.add("is-active");
   getWeatherMoscow();
 };
 
 const handleRenderCardIstanbul = () => {
+  deleteCard();
   resetButtonStyle();
   buttonIstanbul.classList.add("is-active");
   getWeatherIstanbul();
@@ -180,6 +179,20 @@ const resetButtonStyle = () => {
     button.classList.remove("is-active");
   });
 };
+
+//@to-do: написать функцию удаления карточки
+const deleteCard = () => {
+  const cardElement = main.querySelector(".card");
+  if (cardElement) {
+    cardElement.remove();
+  }
+}
+
+//@to-do: написать функцию переключения темы
+const setPinkTheme = () => {
+  pageColor.classList.add('theme-pink');
+  
+}
 
 //@to-do: навесить слушатели на кнопки
 buttonLondon.addEventListener("click", handleRenderCardLondon);
