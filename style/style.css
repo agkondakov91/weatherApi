@@ -21,16 +21,17 @@
   font-weight: 900;
   line-height: normal;
   cursor: pointer;
+  color: #000;
 }
 
 .header__item:hover {
   background-color: #000;
-  color: var(--color);
+  color: var(--yellow-color);
 }
 
 .is-active {
   background-color: #000;
-  color: var(--color);
+  color: var(--yellow-color);
 }
 
 .main {
@@ -88,7 +89,7 @@
   height: 233px;
   border-radius: 20px;
   background: #000;
-  color: var(--color);
+  color: var(--yellow-color);
 }
 
 .places__list {

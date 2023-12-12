@@ -4,7 +4,7 @@ const buttonLondon = document.querySelector(".London");
 const buttonMoscow = document.querySelector(".Moscow");
 const buttonIstanbul = document.querySelector(".Istanbul");
 const buttons = document.querySelectorAll(".header__item");
-const pageColor = document.querySelector('.page');
+const pageColor = document.querySelector(".page");
 
 //@to-do: найти темплейт
 const main = document.querySelector(".main");
@@ -154,7 +154,6 @@ const getDateNow = () => {
 const handleRenderCardLondon = () => {
   deleteCard();
   resetButtonStyle();
-  setPinkTheme();
   buttonLondon.classList.add("is-active");
   getWeatherLondon();
 };
@@ -186,13 +185,7 @@ const deleteCard = () => {
   if (cardElement) {
     cardElement.remove();
   }
-}
-
-//@to-do: написать функцию переключения темы
-const setPinkTheme = () => {
-  pageColor.classList.add('theme-pink');
-  
-}
+};
 
 //@to-do: навесить слушатели на кнопки
 buttonLondon.addEventListener("click", handleRenderCardLondon);
