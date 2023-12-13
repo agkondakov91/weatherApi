@@ -6,7 +6,7 @@
   max-width: 1440px;
   min-height: 100vh;
   margin: 0 auto;
-  padding: 80px;
+  padding: clamp(1.875rem, 0.982rem + 4.46vw, 5rem);
   background-color: var(--yellow-color);
   color: #000;
   font-family: 'Inter', sans-serif;

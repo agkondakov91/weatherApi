@@ -1,13 +1,30 @@
+.header {
+  display: flex;
+  flex-direction: column;
+}
+
 .header__title {
   margin-block-end: 20px;
-  font-size: 80px;
+  font-size: clamp(2rem, 1.143rem + 4.29vw, 5rem);
   font-weight: 900;
   line-height: normal;
+}
+
+@media (width <= 760px) {
+  .header__title {
+    margin-block-end: 30px;
+  }
 }
 
 .header__list {
   display: flex;
   gap: 20px;
+}
+
+@media (width <= 760px) {
+  .header__list {
+    flex-direction: column;
+  }
 }
 
 .header__item {
@@ -24,6 +41,12 @@
   color: #000;
 }
 
+@media (width <= 760px) {
+  .header__item {
+    width: 100%;
+  }
+}
+
 .header__item:hover {
   background-color: #000;
   color: var(--yellow-color);
@@ -35,11 +58,11 @@
 }
 
 .main {
-  padding-block-start: 80px;
+  padding-block-start: clamp(3.75rem, 3.393rem + 1.79vw, 5rem);
 }
 
 .main__card {
-  margin-block-end: 80px;
+  margin-block-end: clamp(3.75rem, 3.393rem + 1.79vw, 5rem);
 }
 
 .main__city {
@@ -64,6 +87,12 @@
   width: 1056px;
   border: 2px solid #000;
   border-radius: 20px;
+}
+
+@media (width <= 760px) {
+  .places__item {
+    border: none;
+  }
 }
 
 .places__info {
