@@ -66,7 +66,7 @@
 }
 
 .main__city {
-  font-size: 100px;
+  font-size: clamp(3.125rem, 2.232rem + 4.46vw, 6.25rem);
   font-weight: 400;
   line-height: normal;
 }
@@ -84,7 +84,7 @@
 
 .places__item {
   padding: 50px;
-  width: 1056px;
+  width: clamp(41.875rem, 14.837rem + 56.85vw, 66rem);
   border: 2px solid #000;
   border-radius: 20px;
 }
@@ -92,6 +92,8 @@
 @media (width <= 760px) {
   .places__item {
     border: none;
+    padding: 0;
+    width: 100%;
   }
 }
 
@@ -102,8 +104,15 @@
   margin-block-end: 30px;
 }
 
+@media (width <= 760px) {
+  .places__info {
+    flex-direction: column;
+    gap: clamp(1.875rem, -0.398rem + 11.36vw, 5rem);
+  }
+}
+
 .places__temperature {
-  font-size: 233px;
+  font-size: clamp(8rem, 6.125rem + 9.38vw, 14.563rem);
   font-weight: 400;
   line-height: 100%;
   letter-spacing: -23.3px;
@@ -113,12 +122,19 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
-  padding: 40px;
-  width: 412px;
-  height: 233px;
+  align-content: center;
+  padding: clamp(1.875rem, 1.696rem + 0.89vw, 2.5rem);
+  width: clamp(20rem, 13.556rem + 13.55vw, 25.75rem);
+  height: clamp(9.625rem, 8.214rem + 7.05vw, 14.563rem);
   border-radius: 20px;
   background: #000;
   color: var(--yellow-color);
+}
+
+@media (width <= 760px) {
+  .places__card {
+    width: 100%;
+  }
 }
 
 .places__list {
@@ -127,39 +143,38 @@
 
 .places__image {
   margin-block-end: 10px;
+  width: clamp(3.125rem, 2.518rem + 3.04vw, 5.25rem);
 }
 
 .places__title {
   margin-block-end: 5px;
-  font-size: 24px;
+  font-size: clamp(1rem, 0.857rem + 0.71vw, 1.5rem);
   font-weight: 900;
   line-height: normal;
 }
 
 .places__paragraph {
-  font-size: 16px;
+  font-size: clamp(0.75rem, 0.679rem + 0.36vw, 1rem);
   font-weight: 400;
   line-height: normal;
 }
 
 .places__daily {
   margin-block-end: 20px;
-  font-size: 24px;
+  font-size: clamp(1rem, 0.857rem + 0.71vw, 1.5rem);
   font-weight: 900;
   line-height: normal;
 }
 
 .places__description {
-  width: 827px;
-  font-size: 24px;
+  width: 100%;
+  font-size: clamp(1rem, 0.857rem + 0.71vw, 1.5rem);
   font-weight: 400;
   line-height: normal;
 }
 
 .places__accent {
-  font-size: 24px;
   font-weight: 900;
-  line-height: normal;
 }
 
 .footer p {
