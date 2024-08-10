@@ -1,3 +1,37 @@
+:root {
+  --yellow-color: #ffe143;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.page {
+  max-width: 1440px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: clamp(1.875rem, 0.982rem + 4.46vw, 5rem);
+  background-color: var(--yellow-color);
+  color: #000;
+  font-family: 'Inter', sans-serif;
+}
+
+h1,
+h2,
+h3,
+p,
+ul,
+ol,
+li,
+blockquote {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
 .header {
   display: flex;
   flex-direction: column;

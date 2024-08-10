@@ -1,3 +1,5 @@
+import './style.css';
+
 //@to-do 1: найти элементы
 const buttonLondon = document.querySelector('.London');
 const buttonMoscow = document.querySelector('.Moscow');
@@ -13,7 +15,7 @@ const placesAccent = Array.from(card.querySelectorAll('.places__accent'));
 //@to-do 2: подключить апи по документации https://openweathermap.org/current
 const wetherConfig = {
   url: 'https://api.openweathermap.org/data/2.5/weather?',
-  key: 'df63a1c95610dafbdefed187acab2173',
+  key: process.env.KEY,
   city: {
     London: 'q=London',
     Moscow: 'q=Moscow',
@@ -79,7 +81,7 @@ const addCardInfo = (data) => {
   const placesTitleInfo = [
     `${data.wind.speed}`,
     `${data.main.humidity}`,
-    `${data.visibility / 1000}`
+    `${data.visibility / 1000}`,
   ];
   const placesAccentInfo = [
     `${data.main.feels_like}°`,
@@ -128,7 +130,6 @@ const handleRenderCardIstanbul = () => {
   resetButtonStyle();
   buttonIstanbul.classList.add('is-active');
   getIstanbulWether().then((data) => addCardInfo(data));
-  
 };
 
 //@to-do 8: написать функцию сброса стилей для кнопок
