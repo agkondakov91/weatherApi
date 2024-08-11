@@ -4,6 +4,8 @@ _Pet-проект для лучшего понимания отправки за
 
 ## Screenshot
 
+<img width="886" alt="weatherImg" src="https://github.com/user-attachments/assets/dfbc4b23-4c7a-4192-b88c-e9ddc7cf8bb8">
+
 ## Description
 
 В проекте используются данные о погоде с ресурса метеорологической службы [OpenWeatherMap](https://openweathermap.org/). При выполнении запроса к API возвращаются данные в формате **JSON** с необходимыми для отображения параметрами.\
